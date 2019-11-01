@@ -1,4 +1,4 @@
-package ec.wiwaclinic.controlador.especie;
+package ec.wiwaclinic.controlador;
 
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.ArrayList;
