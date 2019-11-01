@@ -18,10 +18,8 @@ public class EspecieControlador {
 	@Autowired
 	EspecieDao especieDao;
 
-	public String guardar(Especie especie) {
-		especieDao.save(especie);
-
-		return null;
+	public void guardar(Especie especie) {
+		especieDao.save(especie);		
 	}
 
 	public ArrayList<Especie> listarTodo() {
