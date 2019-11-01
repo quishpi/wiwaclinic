@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import ec.wiwaclinic.controlador.especie.EspecieControlador;
+import ec.wiwaclinic.controlador.EspecieControlador;
 import ec.wiwaclinic.modelo.dao.EspecieDao;
 import ec.wiwaclinic.modelo.entidad.Especie;
 
