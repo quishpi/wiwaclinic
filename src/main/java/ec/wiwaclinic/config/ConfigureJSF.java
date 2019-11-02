@@ -22,6 +22,7 @@ public class ConfigureJSF {//implements ServletContextAware {
 		Builder<String, Object> builder = new ImmutableMap.Builder<String, Object>();
 		builder.put("viewMyBean", new ViewScope());
 		builder.put("especieListaBean", new ViewScope());
+		builder.put("empresaNuevoBean", new ViewScope());
 		configurer.setScopes(builder.build());
 		// configurer.setScopes(new ImmutableMap.Builder<String,
 		// Object>().put("viewMyBean", new ViewScope()).build());

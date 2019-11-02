@@ -14,14 +14,14 @@ import ec.wiwaclinic.modelo.entidad.Especie;
 
 @Component
 @Scope("especieListaBean")
-public class EspecieListaBean {
+public class EspecieIndexBean {
 
 	private ArrayList<Especie> especieLista;
 
 	@Autowired
 	EspecieControlador especieControlador;
 
-	public EspecieListaBean() {
+	public EspecieIndexBean() {
 		System.out.println("EspecieLista Creado!");
 	}
 
@@ -29,7 +29,7 @@ public class EspecieListaBean {
 	public void init() {
 		especieLista = especieControlador.listarTodo();
 	}
-
+	
 	public ArrayList<Especie> getEspecieLista() {
 		return especieLista;
 	}
