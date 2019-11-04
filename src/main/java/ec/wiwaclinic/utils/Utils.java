@@ -1,4 +1,4 @@
-package ec.wiwaclinic;
+package ec.wiwaclinic.utils;
 
 import java.io.File;
 import java.io.FileInputStream;

@@ -11,8 +11,8 @@
 		<div class="user-panel">
 			<p:outputPanel rendered="#{usuarioLoginBean.instituto.logo != null}">
 				<div class="pull-left image">
-					<o:graphicImage value="#{usuarioLoginBean.instituto.logo}"
-						style="max-width: 100%;" dataURI="true" class="img-thumbnail" />
+					<!-- <o:graphicImage value="#{usuarioLoginBean.instituto.logo}"
+						style="max-width: 100%;" dataURI="true" class="img-thumbnail" /> -->
 				</div>
 			</p:outputPanel>
 		</div>
@@ -25,41 +25,33 @@
 	</div>
 	<!-- sidebar menu: : style can be found in sidebar.less -->
 	<ul class="sidebar-menu">
-		<li class="header">MAIN NAVIGATION</li>
-		<li class="active treeview"><a
-			href="../../pages/escritorio/index.xhtml"> <i
-				class="fa fa-dashboard"></i> <span>Escritorio</span> <span
+		<li class="header">MENU</li>
+		<li class="active treeview"><a href="/escritorio/index.xhtml">
+				<i class="fa fa-desktop"></i> <span>Escritorio</span> <span
 				class="pull-right-container"> </span>
 		</a></li>
-		<li class="treeview"><a href="#"> <i class="fa fa-dashboard"></i>
-				<span>Funcionarios</span> <span class="pull-right-container">
-					<i class="fa fa-angle-left pull-right"></i>
+		<li class="treeview"><a href="#"> <i
+				class="fa fa-chevron-circle-right"></i> <span>Generales</span> <span
+				class="pull-right-container"> <i
+					class="fa fa-angle-left pull-right"></i>
 			</span>
 		</a>
 			<ul class="treeview-menu">
-				<li><a href="../funcionario/index.xhtml"><i
-						class="fa fa-circle-o"></i>Todas las entradas</a></li>
-				<li><a href="../funcionario/create.xhtml"><i
-						class="fa fa-circle-o"></i>Añadir nuevo</a></li>
+				<li><a href="/especie/index.xhtml"><i
+						class="fa  fa-angle-right"></i>Especies</a></li>
+				<li><a href="#"><i class="fa  fa-angle-right"></i>Raza</a></li>
 			</ul></li>
-		<li class="treeview"><a href="#"> <i class="fa fa-dashboard"></i>
-				<span>Tipos de Contrato</span> <span class="pull-right-container">
-					<i class="fa fa-angle-left pull-right"></i>
+		<li class="treeview"><a href="#"> <i
+				class="fa  fa-wrench"></i> <span>Configuracion</span>
+				<span class="pull-right-container"> <i
+					class="fa fa-angle-left pull-right"></i>
 			</span>
 		</a>
 			<ul class="treeview-menu">
-				<li><a href="../tipocontrato/index.xhtml"><i
-						class="fa fa-circle-o"></i>Todas las entradas</a></li>
-				<li><a href="../tipocontrato/create.xhtml"><i
-						class="fa fa-circle-o"></i>Añadir nuevo</a></li>
+				<li><a href="#"><i class="fa  fa-angle-right"></i>Empresa</a></li>
 			</ul></li>
 		<li class="active treeview"><a
-			href="../../pages/institucion/index.xhtml"> <i
-				class="fa fa-dashboard"></i> <span>Institución</span> <span
-				class="pull-right-container"> </span>
-		</a></li>
-		<li class="active treeview"><a
-			href="../../pages/reporte/index.xhtml"> <i
+			href="#"> <i
 				class="fa fa-dashboard"></i> <span>Reporte</span> <span
 				class="pull-right-container"> </span>
 		</a></li>

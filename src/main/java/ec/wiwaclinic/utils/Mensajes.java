@@ -1,4 +1,4 @@
-package ec.wiwaclinic;
+package ec.wiwaclinic.utils;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.application.FacesMessage.Severity;

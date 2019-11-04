@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="#{root}/WEB-INF/template/layout.xhtml">
+
+	<ui:define name="title">Especies</ui:define>
+	<ui:define name="content">
+		<h:form>
+			<p:growl id="growl" sticky="false" life="5000" showDetail="false"
+				autoUpdate="true" />
+			<div class="row">
+				<div class="col-g-12 col-md-6 col-lg-4 col-xl-2">
+					<h4>Nombre</h4>
+					<h:panelGrid columns="1" class="anchocien">
+						<p:inputText id="txtNombre" value="" required="true"
+							requiredMessage="Ingrese el nombre" class="anchocien">
+							<p:watermark value="Nombre de la especie" for="txtNombre" />
+						</p:inputText>
+					</h:panelGrid>
+					<h4>Direccion</h4>
+					<h:panelGrid columns="1" class="anchocien">
+						<p:inputText id="fname2" value="" required="true"
+							requiredMessage="Ingrese la direccion" class="anchocien">
+							<p:watermark value="First Name" for="fname2" />
+						</p:inputText>
+					</h:panelGrid>
+					<div></div>
+					<center>
+						<div class="btn-group">
+							<p:commandButton value="Guardar"
+								actionListener="#{funcionarioCreateBean.guardar()}"
+								icon="fa fa-save" class="btn" ajax="true" update=""
+								onstart="PF('statusDialog').show()"
+								onsuccess="PF('statusDialog').hide()" />
+							<p:commandButton value="Regresar"
+								onclick="location.href = 'index.xhtml';" icon="fa fa-sign-out"
+								class="btn" immediate="true" />
+						</div>
+					</center>
+					<p:messages id="messages" showDetail="false" autoUpdate="true"
+						closable="true">
+						<p:autoUpdate />
+					</p:messages>
+				</div>
+				<div class="col-g-12 col-md-6 col-lg-8 col-xl-10">
+					<p:dataTable id="tbl" var="especie"
+						value="#{especieIndexBean.especieLista}"
+						paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
+						paginator="true" rows="10" style="margin-bottom:20px">
+
+						<f:facet name="{Exporters}">
+							<div style="float: right; padding-top: 5px;">
+								<h:commandLink>
+									<p:graphicImage name="../resources/images/excel.png" width="24" />
+									<p:dataExporter type="xls" target="tbl" fileName="cars" />
+								</h:commandLink>
+
+								<h:commandLink>
+									<p:graphicImage name="/resources/images/pdf.png" width="24" />
+									<p:dataExporter type="pdf" target="tbl" fileName="cars" />
+								</h:commandLink>
+
+								<h:commandLink>
+									<p:graphicImage name="/resources/images/csv.png" width="24" />
+									<p:dataExporter type="csv" target="tbl" fileName="cars" />
+								</h:commandLink>
+
+								<h:commandLink>
+									<p:graphicImage name="/resources/images/xml.png" width="24" />
+									<p:dataExporter type="xml" target="tbl" fileName="cars" />
+								</h:commandLink>
+							</div>
+						</f:facet>
+						<p:column>
+							<f:facet name="header">
+								<h:outputText value="Id" />
+							</f:facet>
+							<h:outputText value="#{especie.id}" />
+						</p:column>
+
+						<p:column>
+							<f:facet name="header">
+								<h:outputText value="Year" />
+							</f:facet>
+							<h:outputText value="#{especie.nombre}" />
+						</p:column>
+					</p:dataTable>
+
+				</div>
+			</div>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

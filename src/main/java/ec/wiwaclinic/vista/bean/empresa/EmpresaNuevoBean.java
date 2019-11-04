@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import ec.wiwaclinic.Utils;
 import ec.wiwaclinic.controlador.EmpresaControlador;
 import ec.wiwaclinic.modelo.entidad.Empresa;
+import ec.wiwaclinic.utils.Utils;
 
 @Component
-@Scope("empresaNuevoBean")
+@Scope("view")
 public class EmpresaNuevoBean {
 
 	private Empresa empresa;
